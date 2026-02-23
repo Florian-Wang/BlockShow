@@ -1,0 +1,38 @@
+{
+  "name": "blockshow",
+  "version": "1.0.1",
+  "description": "Block by Block, Nets Unfolded",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-builder"
+  },
+  "keywords": ["electron", "onnx", "visualizer"],
+  "author": "Florian Wang",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "onnx-proto": "^8.0.1",
+    "protobufjs": "^7.5.4"
+  },
+  "build": {
+    "appId": "com.Florian.BlockShow",
+    "productName": "BlockShow",
+    "forceCodeSigning": false,
+    "win": {
+      "target": ["nsis","portable"],
+      "icon": "build/icon.ico",
+      "verifyUpdateCodeSignature": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
